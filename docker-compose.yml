@@ -1,0 +1,65 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+  api1_1:
+    build:
+      context: ./multinational-startup-support-platform-migration-ts
+      dockerfile: Dockerfile  # Dockerfile의 이름이 표준이면 생략 가능
+    container_name: api1_1
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+  api1_2:
+    build:
+      context: ./multinational-startup-support-platform-migration-ts
+      dockerfile: Dockerfile  # Dockerfile의 이름이 표준이면 생략 가능
+    container_name: api1_2
+    ports:
+      - "8001:8000"
+    networks:
+      - app-network
+
+  api2:
+    build:
+      context: ./chatbot
+      dockerfile: Dockerfile  # Dockerfile의 이름이 표준이면 생략 가능
+    container_name: api2
+    ports:
+      - "9000:9000"
+    networks:
+      - app-network
+
+        #scheduler:
+        #build:
+        #context: ./k-startup-scraper
+        #dockerfile: Dockerfile  # Dockerfile의 이름이 표준이면 생략 가능
+        #container_name: crontab setup
+        #networks:
+        #- app-network
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - api1_1
+      - api1_2
+      - api2
+
+networks:
+  app-network:
+    driver: bridge
+

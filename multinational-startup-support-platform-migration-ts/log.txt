@@ -1,0 +1,54 @@
+Attaching to multinational-startup-support-platform-migration-ts_nginx_1, multinational-startup-support-platform-migration-ts_redis_1, node2, node1
+[36mnginx_1  |[0m /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+[36mnginx_1  |[0m /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+[36mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+[36mnginx_1  |[0m 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+[36mnginx_1  |[0m 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+[36mnginx_1  |[0m /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+[36mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+[36mnginx_1  |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+[36mnginx_1  |[0m /docker-entrypoint.sh: Configuration complete; ready for start up
+[36mnginx_1  |[0m 2024/05/13 06:16:59 [error] 28#28: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.4.132, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.3:8000/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 2024/05/13 06:16:59 [error] 28#28: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.4.132, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.2:8001/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:16:59 +0000] "GET /health HTTP/1.1" 502 157 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 2024/05/13 06:17:25 [error] 28#28: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.34.78, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.2:8001/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:17:25 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:29 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:29 +0000] "GET /swagger/ HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui.css HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-init.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui.css HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:30 +0000] "GET /swagger/swagger-ui-init.js HTTP/1.1" 304 0 "https://api.g-start-up.com/swagger/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+[36mnginx_1  |[0m 2024/05/13 06:17:55 [error] 28#28: *22 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.34.78, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.2:8001/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:17:55 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:17:59 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:18:25 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:18:29 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 2024/05/13 06:18:55 [error] 28#28: *31 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.34.78, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.2:8001/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:18:55 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:18:59 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:19:25 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:19:29 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:19:55 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 2024/05/13 06:19:55 [error] 28#28: *40 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.34.78, server: 3.34.226.107, request: "GET /health HTTP/1.1", upstream: "http://172.27.0.2:8001/health", host: "172.31.37.43"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:19:59 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:20:04 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+[36mnginx_1  |[0m 172.31.34.78 - - [13/May/2024:06:20:25 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[36mnginx_1  |[0m 172.31.4.132 - - [13/May/2024:06:20:29 +0000] "GET /health HTTP/1.1" 404 145 "-" "ELB-HealthChecker/2.0"
+[33mredis_1  |[0m 1:C 13 May 2024 06:16:57.906 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[33mredis_1  |[0m 1:C 13 May 2024 06:16:57.909 # WARNING Your system is configured to use the 'xen' clocksource which might lead to degraded performance. Check the result of the [slow-clocksource] system check: run 'redis-server --check-system' to check if the system's clocksource isn't degrading performance.
+[33mredis_1  |[0m 1:C 13 May 2024 06:16:57.909 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33mredis_1  |[0m 1:C 13 May 2024 06:16:57.909 * Redis version=7.2.4, bits=64, commit=00000000, modified=0, pid=1, just started
+[33mredis_1  |[0m 1:C 13 May 2024 06:16:57.909 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[33mredis_1  |[0m 1:M 13 May 2024 06:16:57.910 * monotonic clock: POSIX clock_gettime
+[33mredis_1  |[0m 1:M 13 May 2024 06:16:57.917 * Running mode=standalone, port=6379.
+[33mredis_1  |[0m 1:M 13 May 2024 06:16:57.934 * Server initialized
+[33mredis_1  |[0m 1:M 13 May 2024 06:16:57.934 * Ready to accept connections tcp
+[32mnode1    |[0m 2024-05-13 06:17:13:1713 [ [32minfo[39m ]: [32mserver open[39m
+[32mnode1    |[0m 2024-05-13 06:17:13:1713 [ [32minfo[39m ]: [32mredis open[39m
+[35mnode2    |[0m 2024-05-13 06:17:13:1713 [ [32minfo[39m ]: [32mserver open[39m
+[35mnode2    |[0m 2024-05-13 06:17:13:1713 [ [32minfo[39m ]: [32mredis open[39m
